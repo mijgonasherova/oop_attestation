@@ -1,16 +1,22 @@
-# This is a sample Python script.
+from calculator.complex_number import ComplexNumber
+from calculator.operations.operations import AdditionOperation, MultiplicationOperation, DivisionOperation
+from logger.logger import log_operation
 
-# Press Ctrl+F5 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    number1 = ComplexNumber(3, 2)
+    number2 = ComplexNumber(1, 4)
 
+    addition_op = AdditionOperation()
+    result_add = add_op.calculate(number1, number2)
+    log_operation("Addition", str(result_add))
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press F9 to toggle the breakpoint.
+    multiplication_op = MultiplicationOperation()
+    result_mult = mult_op.calculate(number1, number2)
+    log_operation("Multiplication", str(result_mult))
 
+    division_op = DivisionOperation()
+    result_div = div_op.calculate(number1, number2)
+    log_operation("Division", str(result_div))
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
