@@ -7,15 +7,15 @@ def main():
     number2 = ComplexNumber(1, 4)
 
     addition_op = AdditionOperation()
-    result_add = add_op.calculate(number1, number2)
+    result_add = addition_op.calculate(number1, number2)
     log_operation("Addition", str(result_add))
 
     multiplication_op = MultiplicationOperation()
-    result_mult = mult_op.calculate(number1, number2)
+    result_mult = multiplication_op.calculate(number1, number2)
     log_operation("Multiplication", str(result_mult))
 
     division_op = DivisionOperation()
-    result_div = div_op.calculate(number1, number2)
+    result_div = division_op.calculate(number1, number2)
     log_operation("Division", str(result_div))
 
 if __name__ == "__main__":
